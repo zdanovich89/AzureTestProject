@@ -10,11 +10,12 @@ pool:
   vmImage: 'windows-latest'
  
 variables:
+  -group: variables
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   solution: '**/RoundTheCode.AzureTestProject.sln'
   project: '**/RoundTheCode.AzureTestProject.csproj'
-  -group: variables
+
  
 steps:
 - task: NuGetToolInstaller@1
