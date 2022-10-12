@@ -9,8 +9,7 @@ trigger:
 pool:
   vmImage: 'windows-latest'
  
-variables:
-  -group: variables
+variables:  
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   solution: '**/RoundTheCode.AzureTestProject.sln'
@@ -18,9 +17,11 @@ variables:
 
  
 steps:
+
 - task: NuGetToolInstaller@1
   name: 'NuGetToolInstaller'
   displayName: 'NuGet tool installer'
+
  
 - task: NuGetCommand@2
   name: 'NuGetRestore'
